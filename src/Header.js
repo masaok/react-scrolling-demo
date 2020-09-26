@@ -34,10 +34,10 @@ const Header = props => {
 
   console.log('RENDERING HEADER')
 
-  const doStuff = () => {
-    console.log('DOING STUFF')
-    setName('KITAMURA')
-  }
+  // const doStuff = () => {
+  //   console.log('DOING STUFF')
+  //   setName('KITAMURA')
+  // }
 
   return (
     // https://stackoverflow.com/questions/52653103/what-is-appbar-vs-toolbar
@@ -47,11 +47,14 @@ const Header = props => {
       </Helmet>
       <Toolbar>
         <div>THIS IS THE HEADER</div>
-        <Button onClick={doStuff}>DO STUFF</Button>
+        {/* <Button onClick={doStuff}>DO STUFF</Button> */}
         <Button className={classes.button} variant="contained" href="/">
           Home
         </Button>
-        <Button className={classes.button} variant="contained" href="/paper-scroll-demo">
+        <Button className={classes.button} variant="contained" href="/scroll-inside-container">
+          Scroll Inside Container
+        </Button>
+        {/* <Button className={classes.button} variant="contained" href="/paper-scroll-demo">
           Paper Scroll Demo
         </Button>
         <Button className={classes.button} variant="contained" href="/paper-grid-scroll-demo">
@@ -62,7 +65,7 @@ const Header = props => {
         </Button>
         <Button className={classes.button} variant="contained" href="/state-variable-copy-demo">
           State Variable Copy Demo
-        </Button>
+        </Button> */}
       </Toolbar>
     </AppBar>
   )

@@ -15,6 +15,8 @@ import Header from './Header'
 import Home from './Home'
 import Footer from './Footer'
 
+import ScrollInsideContainer from './components/ScrollInsideContainer'
+
 import PaperScrollDemo from './components/PaperScrollDemo'
 import PaperGridScrollDemo from './components/PaperGridScrollDemo'
 import PaperGridScrollBarDemo from './components/PaperGridScrollBarDemo'
@@ -71,9 +73,9 @@ const App = props => {
   // }
 
   return (
-    <>
+    <div className={classes.root}>
       <Helmet>
-        <title>React Basic Layout Demo - {name}</title>
+        <title>React Scrolling Demo - {name}</title>
       </Helmet>
       <ThemeProvider theme={theme}>
         <CssBaseline />
@@ -85,7 +87,8 @@ const App = props => {
 
             <main className={classes.content}>
               <Switch>
-                <Route exact path="/" component={Home} />
+                <Route exact path="/" component={ScrollInsideContainer} />
+                <Route path="/scroll-inside-container" component={ScrollInsideContainer} />
                 <Route path="/paper-scroll-demo" component={PaperScrollDemo} />
                 <Route path="/paper-grid-scroll-demo" component={PaperGridScrollDemo} />
                 <Route path="/paper-grid-scrollbar-demo" component={PaperGridScrollBarDemo} />
@@ -99,7 +102,7 @@ const App = props => {
           </div>
         </Router>
       </ThemeProvider>
-    </>
+    </div>
   )
 }
 
